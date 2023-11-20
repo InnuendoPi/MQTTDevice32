@@ -55,4 +55,3 @@ GPIO Zuordnung:
 |     D17    |  GPIO014 | TMS       |
 |     D18    |  GPIO015 |           |
 |     D19    |  GPIO013 |           |
-|     D20    |  GPIO010 |           |
