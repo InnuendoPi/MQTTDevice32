@@ -33,25 +33,28 @@ GPIO Zuordnung:
 
 (Grafiken &copy; [AZ-Delivery](https://cdn.shopify.com/s/files/1/1509/1638/files/D1_Mini_ESP32_Datenblatt_AZ-Delivery_Vertriebs_GmbH.pdf?v=1604068666) - Anpassungen für Pinbelegung mit D-Bezeichnern)
 
-| Bezeichner |   GPIO   | Beschreibung |
-| ---------- | -------- | ------------ |
-|     D0     |  GPIO026 |           |
-|     D1     |  GPIO022 |           |
-|     D2     |  GPIO021 |           |
-|     D3     |  GPIO017 |           |
-|     D4     |  GPIO016 |           |
-|     D5     |  GPIO018 |           |
-|     D6     |  GPIO019 |           |
-|     D7     |  GPIO023 |           |
-|     D8     |  GPIO005 |           |
-|     D9     |  GPIO027 |           |
-|     D10    |  GPIO025 |           |
-|     D11    |  GPIO032 |           |
-|     D12    |  GPIO012 | TDI       |
-|     D13    |  GPIO004 |           |
-|     D14    |  GPIO000 |           |
-|     D15    |  GPIO002 |           |
-|     D16    |  GPIO033 |           |
-|     D17    |  GPIO014 | TMS       |
-|     D18    |  GPIO015 |           |
-|     D19    |  GPIO013 |           |
+| Bezeichner |   GPIO   |  Input  |  Output  | Beschreibung |
+| ---------- | -------- | ------- | -------- | ------------ |
+|     D0     |  GPIO026 |   ok    |   ok     |              |
+|     D1     |  GPIO022 |   ok    |   ok     |              |
+|     D2     |  GPIO021 |   ok    |   ok     |              |
+|     D3     |  GPIO017 |   ok    |   ok     |              |
+|     D4     |  GPIO016 |   ok    |   ok     |              |
+|     D5     |  GPIO018 |   ok    |   ok     |              |
+|     D6     |  GPIO019 |   ok    |   ok     |              |
+|     D7     |  GPIO023 |   ok    |   ok     |              |
+|     D8     |  GPIO005 |   ok    |   ok     | CS5          |
+|     D9     |  GPIO027 |   ok    |   ok     | SCLK         |
+|     D10    |  GPIO025 |   ok    |   ok     | MISO         |
+|     D11    |  GPIO032 |   ok    |   ok     | MOSI         |
+|     D12    |  GPIO012 |  (ok)   |   ok     | TDI, boot fails if pulled high, strapping pin |
+|     D13    |  GPIO004 |   ok    |   ok     | CS0         |
+|     D14    |  GPIO000 | pullUp  |  (ok)    | must be low to enter flash mode |
+|     D15    |  GPIO002 |   ok    |   ok     | onboard LED, must be low to enter flash mode |
+|     D16    |  GPIO033 |   ok    |   ok     | CS1          |
+|     D17    |  GPIO014 |   ok    |   ok     | CS2          |
+|     D18    |  GPIO015 |   ok    |   ok     | CS3          |
+|     D19    |  GPIO013 |   ok    |   ok     | CS4          |
+
+Pins connected to onboard flash and not recommended for GPIO use:
+CMD (IO11), CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9) and SD3 (IO10)
