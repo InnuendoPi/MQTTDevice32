@@ -1,37 +1,43 @@
 # MQTTDevice32
 
-Portierung auf ESP32 D1
+[![de](https://img.shields.io/badge/lang-de-green.svg)](https://raw.githubusercontent.com/InnuendoPi/MQTTDevice32/main/README.md)
 
-## Erste Installation
+MQTTDevice32 is a port to ESP32 D1 from MQTTDevice4 ESP8266. MQTTDevice32 offers more GPIOs, faster CPU and multi language support. MQTTDevice32 enables sensors, actors and an induction hob to be connected via WLAN to [CraftBeerPi V4](https://github.com/avollkopf/craftbeerpi4).
 
-* Download [Firmeware.zip](https://github.com/InnuendoPi/MQTTDevice32/blob/main/tools/Firmware.zip)
-* Firmware.zip entpacken
-* Flashen.cmd editieren:
-* "COM3" in Zeile 6  und Zeile 8"esptool.exe -p COM3" anpassen
-* Eingabeaufforderung (cmd.exe) öffnen und in das Verzeichnis von firmware.zip wechseln
-* Firmware auf ESP32 ladeen mit "flashen.cmd"
+MQTTDevice32 is an Arduino sketch for the ESP32 D1 mini modules. This makes it possible to establish communication between the MQTT broker (eg mosquitto) and an ESP32 in order to control sensors and actors with CraftBeerPi V4.
 
-Das Script flashen.cmd verwendet [esptool](https://github.com/espressif/esptool) (im ZIP Archiv enthalten).
-
-## Firmware Update
-
-* WebUpdate
-* DateiUpdate
+![Startseite](docs/img/startseite.jpg)
 
 ## 📚 Dokumentation
 
-Beschreibung & Anleitung: [gitbook](https://innuendopi.github.io/MQTTDevice4/)
+A detailed documentation is available on github pages: <https://innuendopi.github.io/MQTTDevice4/>
+A detailed documentation CraftbeerPi4 is available on github pages:: <https://openbrewing.gitbook.io/craftbeerpi4_support/>
 
-## Pin-Belegung
+## ▶️ Installation ESP32
 
-Der ESP32 D1 bietet ein Pinout passend zum ESP8266 (GPIO D0 bis D8). Die folgende Pinbelegung basiert auf dem Modul ESP32 D1 Mini NodeMCU von [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
+* Download [Firmeware.zip](https://github.com/InnuendoPi/MQTTDevice32/blob/main/tools/Firmware.zip)
+* unzip Firmware.zip
+* edit Flashen.cmd:
+* change "COM3" in line 6 und line 8 "esptool.exe -p COM3" as you need
+* open command line (cmd.exe) and change into firmware.zip directory
+* start script "flashen.cmd"
 
-GPIO Zuordnung:
+Script flashen.cmd use [esptool](https://github.com/espressif/esptool).
+
+## 🗺️ Multilingual
+
+MQTTDevice32 supports (almost) any number of languages. Each language has its own language file. The language files in JSON format are stored in the folder data/language.
+
+_Supported the project and translated the Brautomat into a new language or corrected existing language files!_
+
+## GPIO mapping
+
+The ESP32 D1 offers a pinout suitable for the ESP8266 (GPIO D0 to D8). The pin assignment shown is based on the ESP32 D1 Mini NodeMCU module from [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
+
+GPIO mapping:
 
 ![ESP32 D1 Pinout-1](/docs/img/ESP32-D1.pinout-1.jpg)
 ![ESP32 D1 Pinout-2](/docs/img/ESP32-D1.pinout-2.jpg)
-
-(Grafiken &copy; [AZ-Delivery](https://cdn.shopify.com/s/files/1/1509/1638/files/D1_Mini_ESP32_Datenblatt_AZ-Delivery_Vertriebs_GmbH.pdf?v=1604068666) - Anpassungen für Pinbelegung mit D-Bezeichnern)
 
 | Bezeichner |   GPIO   |  Input  |  Output  | Beschreibung |
 | ---------- | -------- | ------- | -------- | ------------ |
@@ -58,3 +64,12 @@ GPIO Zuordnung:
 
 Pins connected to onboard flash and not recommended for GPIO use:
 CMD (IO11), CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9) and SD3 (IO10)
+
+## Sketch Information
+
+ESP32 Arduino 2.0.14\
+VSCode 1.84 Arduino 0.6\
+VSCode plugin ESP8266Littlefs based on VSCode plugin ESP8266fs\
+InnuTicker task scheduler lib\
+InnuFramework CSS/JS bootstrap 4.6.2\
+Server Sent Events (8 SSE channels)
