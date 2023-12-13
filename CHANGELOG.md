@@ -2,6 +2,8 @@
 
 Version 4.58
 
+- Fix:        close modal windows after config restore and reboot
+- Changed:    reboot function
 - Changed:    Merged source ESP8266 in ESP32 using compiler directives
 - Changed:    Rebuild WebIf
 - Changed:    Restore config file
