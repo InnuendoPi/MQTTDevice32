@@ -2,6 +2,7 @@
 
 Version 4.58b
 
+- Fix:        WebUpdate FrameWork
 - Changed:    Default WLAN name in AP Mode changed to MQTTDevice
 - Changed:    Reset to factory default (clear config and WLAN settings enabled)
 - Fix:        max number of sensors allowed
