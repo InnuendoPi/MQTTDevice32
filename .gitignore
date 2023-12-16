@@ -61,9 +61,7 @@ build/MQTTDevice32.ino.partitions.bin
 build/MQTTDevice32.ino.bootloader.bin
 build/file_opts
 build/includes.cache
-build/partitions.csv
 build/libraries.cache
-
 data/config.txt
 tools/boot_app0.bin
 tools/MQTTDevice32.ino.bin
@@ -81,4 +79,3 @@ FSBrowser/
 *.hintrc
 PINMAP.txt
 Infos.txt
-partitions.csv
