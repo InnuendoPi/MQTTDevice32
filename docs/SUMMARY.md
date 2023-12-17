@@ -1,6 +1,6 @@
 # Table of contents
 
-* [MQTTDevice32](README.md)
+* [MQTTDevice32](readme.md)
 * [Features](features.md)
 * [Installation](installation.md)
   * [MQTT](MQTT.md)

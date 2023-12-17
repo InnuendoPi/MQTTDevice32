@@ -10,7 +10,7 @@ MQTTDevice32 is an Arduino sketch for the ESP32 D1 mini modules. This makes it p
 
 ## 📚 Dokumentation
 
-A detailed documentation is available on github pages: <https://innuendopi.github.io/MQTTDevice4/>
+A detailed documentation is available on github pages: <https://innuendopi.gitbook.io/mqttdevice32/>
 A detailed documentation CraftbeerPi4 is available on github pages:: <https://openbrewing.gitbook.io/craftbeerpi4_support/>
 
 ## ▶️ Installation ESP32

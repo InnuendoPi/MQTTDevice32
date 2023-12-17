@@ -22,7 +22,7 @@ Das Script flashen.cmd verwendet [esptool](https://github.com/espressif/esptool)
 
 ## 📚 Dokumentation
 
-Beschreibung & Anleitung: [gitbook](https://innuendopi.github.io/MQTTDevice4/)
+Beschreibung & Anleitung: [gitbook](https://innuendopi.gitbook.io/mqttdevice32/)
 
 ## Pin-Belegung
 
