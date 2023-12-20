@@ -6,7 +6,7 @@
 
 MQTTDevice32 is an Arduino sketch for the ESP32 Wemos D1 mini modules. MMQTTDevice32 enables sensors, actors and an induction hob GGM IDS2 to be communicate via WLAN and MQTT with [CraftBeerPi V4](https://github.com/avollkopf/craftbeerpi4). MQTTDevice32 offers more GPIOs and a faster CPU than MQTTDevice4.
 
-![Web Interface](docs/img/startseite.jpg)
+![Web Interface](img/startseite.jpg)
 
 ## 🗺️ Multilingual
 

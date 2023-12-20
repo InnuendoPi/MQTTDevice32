@@ -44,7 +44,7 @@ Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 
 Step 1: flash firmware MQTTDevice.ino.bin
 
-![macOS](/docs/img/flashen_macos.png)
+![macOS](img/flashen_macos.png)
 
 Step 2: connect device with your WLAN
 
