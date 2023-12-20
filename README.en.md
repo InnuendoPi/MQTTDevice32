@@ -1,12 +1,11 @@
 # MQTTDevice32
 
 [![de](https://img.shields.io/badge/lang-de-yellow.svg)](https://github.com/InnuendoPi/MQTTDevice32/blob/main/README.md)
-[![ESP32](https://img.shields.io/static/v1?label=Arduino&message=ESP32%20&#8595;&logo=arduino&logoColor=white&color=blue)](https://github.com/InnuendoPi/MQTTDevice32)
 [![ESP8266](https://img.shields.io/static/v1?label=Arduino&message=ESP8266%20&#8594;&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/MQTTDevice4)
 
 MQTTDevice32 is an Arduino sketch for the ESP32 Wemos D1 mini modules. MMQTTDevice32 enables sensors, actors and an induction hob GGM IDS2 to be communicate via WLAN and MQTT with [CraftBeerPi V4](https://github.com/avollkopf/craftbeerpi4). MQTTDevice32 offers more GPIOs and a faster CPU than MQTTDevice4.
 
-![Startseite](docs/img/startseite.jpg)
+![Web Interface](docs/img/startseite.jpg)
 
 ## ✅ Features
 

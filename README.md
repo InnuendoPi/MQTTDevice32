@@ -5,7 +5,7 @@
 
 MQTTDevice32 ist ein Arduino Sketch für Wemos ESP32 D1 mini Module. Mit dem MQTTDevice32 können Sensoren, Aktoren und das Induktionskochfeld GGM IDS2 über WLAN mit [CraftBeerPi V4](https://github.com/avollkopf/craftbeerpi4) verbunden werden. MQTTDevice32 bietet mehr GPIOs und eine schnellere CPU als das MQTTDevice4.
 
-![Startseite](docs/img/startseite.jpg)
+![Web Interface](docs/img/startseite.jpg)
 
 ## ✅ Features
 
