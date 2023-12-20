@@ -34,8 +34,7 @@ MQTTDevice32 ist ein Arduino Sketch für Wemos ESP32 D1 mini Module. Mit dem MQT
 
 ## 📚 Dokumentation
 
-Beschreibung & Anleitung: [Anleitung](https://innuendopi.gitbook.io/mqttdevice32/)\
-CraftBeerPi V4 Dokumenation and Support: [CraftBeerPi](https://openbrewing.gitbook.io/craftbeerpi4_support/)
+Beschreibung & Anleitung: [Anleitung](https://innuendopi.gitbook.io/mqttdevice32/)
 
 ## ▶️ Installation ESP32
 

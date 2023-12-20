@@ -1,4 +1,4 @@
-# Flash firmware
+# ▶️ Flash firmware
 
 With the help of esptool.exe (<https://github.com/igrr/esptool-ck/releases>) in the github tools subfolder, the firmware can be flashed onto the ESP module. The ESPTool is available for different operating systems.
 ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This code is licensed under GPL v2.
@@ -17,28 +17,43 @@ Example for an ESP8266 module of the type Wemos D1 mini with 4MB Flash connected
 
   *The Flash script uses COM3 as the connection for the MQTTDevice. If COM3 is not the correct port for the Wemos D1 mini, COM3 must be replaced by the correct port in two places in the Flashen.cmd script.*
 
-  After flashing, the MQTT device starts in access point mode with the name "ESP8266-xxxx" und address <http://192.168.4.1>
+## Manual flash firmware
+
+Linux users must download esptool and flash firmware manual
+
+ESP32 modules:
+
+```bash
+esptool.exe -p COM3  --chip esp32 erase_flash
+echo Flash firmware and LittleFS 
+esptool.exe --chip esp32 --port COM3 --baud 921600  --before default_reset --after hard_reset write_flash  -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 MQTTDevice32.ino.bootloader.bin 0x8000 MQTTDevice32.ino.partitions.bin 0xe000 boot_app0.bin 0x10000 MQTTDevice32.ino.bin 0x2b0000 MQTTDevice32.mklittlefs.bin
+```
+
+ESP8266 modules
+
+```bash
+esptool.exe -cp COM3 -cd nodemcu -ce
+esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf MQTTDevice.ino.bin -ca 0x200000 -cf MQTTDevice.mklittlefs.bin
+```
+
+Change COM3 as required.
+
+## Flash Firmware macOS
+
+Download: [pyflasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
+
+Step 1: flash firmware MQTTDevice.ino.bin
+
+![macOS](/docs/img/flashen_macos.png)
+
+Step 2: connect device with your WLAN
+
+Step 3: open file update on MQTTDevice: <http://mqttdevice.local/update> choose filesystem and upload MQTTDevice.mklittlefs.bin
+
+## Configure WLAN
+
+After flashing, the MQTT device starts in access point mode with an open WLAN named "MQTTDevice" and IP address <http://192.168.4.1>
 
 ![wlan](img/wlan-ap.jpg)
 
 The MQTT device must now be connected to the WLAN.
-
-The MQTT sensor "Induction temperature" and the MQTT actor "Agitator" are now created on the MQTTdevice with the identical CBPi4 topics:
-
-![mqttSensor2](img/mqttSensor2.jpg)
-
-![mqttAktor2](img/mqttAktor2.jpg)
-
-The sensor or actor name can be different. These steps complete the exemplary installation and configuration of MQTT sensors and actors. Up to 6 sensors and 8 actors can be set up per MQTT device. (Almost) any number of MQTT devices can be connected to CraftbeerPi via MQTT. Three MQTT devices are used very often:
-
-MQTTDevice 1: Mash tun with temperature sensors and agitator.
-
-MQTTDevice 2: HLT with temperature sensors, pumps and valves etc.
-
-MQTTDevice 3: Fermenter with temperature sensors, an actor for heating and an actor for cooling
-
-Any combination is possible. Because the MQTT communication is implemented via topics, a temperature sensor and an induction hob for a CraftbeerPi Kettle do not have to be configured on the same MQTTDeivce.
-
-![induction](img/induction.jpg)
-
-The picture above is an example on how to configure an induction hob GGM IDS2. Do not reduce fan run on after power off below 120sec: savely cool down induction hob after mash or boil. GPIOs D5, D6 and D7 are highly recommended. Check ESP8266 manual for further information about GPIO states (High/Low) on startup.
