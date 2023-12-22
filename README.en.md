@@ -3,7 +3,7 @@
 [![de](https://img.shields.io/badge/lang-de-yellow.svg)](https://github.com/InnuendoPi/MQTTDevice32/blob/main/README.md)
 [![ESP8266](https://img.shields.io/static/v1?label=Arduino&message=ESP8266%20&#8594;&logo=arduino&logoColor=white&color=red)](https://github.com/InnuendoPi/MQTTDevice4)
 
-MQTTDevice32 is an Arduino sketch for the ESP32 Wemos D1 mini modules. MMQTTDevice32 enables sensors, actors and an induction hob GGM IDS2 to be communicate via WLAN and MQTT with [CraftBeerPi V4](https://github.com/avollkopf/craftbeerpi4). MQTTDevice32 offers more GPIOs and a faster CPU than MQTTDevice4.
+MQTTDevice32 is an Arduino sketch for the ESP32 Wemos D1 mini modules. MMQTTDevice32 enables sensors, actors and an induction hob GGM IDS2 to be communicate via WLAN and MQTT with [CraftBeerPi V4](https://github.com/avollkopf/craftbeerpi4). MQTTDevice32 supports more actors and sensors with a faster dual core CPU than MQTTDevice4.
 
 ![Web Interface](docs/img/startseite.jpg)
 
@@ -11,19 +11,24 @@ MQTTDevice32 is an Arduino sketch for the ESP32 Wemos D1 mini modules. MMQTTDevi
 
 * Web Interface (WebIf) for easy configuration, backup and restore
 * Server Sent Events (SSE) for WebClients
-* Temperature sensors (max 6)
-  * Dallas DS18B20 Sensors
+* Temperature sensors
+  * Dallas DS18B20 Sensors (digital)
     * Search for connected sensors based on OneWire addresses
-  * PT100 and PT1000 sensors
+  * PT100 and PT1000 sensors (analog)
     * MAX31865 Amplifyer
+  * MQTTDevice32 supports max 6 sensors
+  * MQTTDevice4 supports max 3 sensors
 * Actors (max 15)
   * GPIO selection
   * used GPIOs are hidden
-  * Inverted GPIO
-  * Power Percentage: values ​​between 0 and 100% are sent. MQTTDevice "pulses" with a cycle of 1000ms
+  * inverted GPIO
+  * PWM values ​​between 0 and 100% are sent. MQTTDevice "pulses" with a cycle of 1000ms
+  * MQTTDevice32 supports up to 15 actors
+  * MQTTDevice4 supports 10 actors
 * Induction hob
   * induction hob GGM IDS2 can be controlled directly
-* Nextion HMI Touchdisplay support (optional)
+* Nextion HMI Touchdisplay support
+* Audio signals Piezo Buzzer
 * WebUpdate firmware
 * mDNS support
 * Event handling
@@ -47,9 +52,9 @@ Script flashen.cmd use [esptool](https://github.com/espressif/esptool).
 
 ## 🗺️ Multilingual
 
-MQTTDevice32 supports different languages. Each language has its own language file. The language files in JSON format are stored in the folder data/language.
+MQTTDevice supports different languages. Each language has its own language file. The language files in JSON format are stored in the data folder.
 
-_Supported the project and translate Brautomat into a new language or corrected existing language files!_
+_Supported the project and translate MQTTDevice into a new language or extend existing language files!_
 
 ## 💠 GPIO mapping
 

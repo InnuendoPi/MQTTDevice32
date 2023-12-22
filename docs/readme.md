@@ -1,10 +1,10 @@
 # MQTTDevice
 
-MQTTDevice is an Arduino sketch for the ESP32 Wemos D1 mini modules. MMQTTDevice enables sensors, actors and an induction hob GGM IDS2 to be communicate via WLAN and MQTT with [CraftBeerPi V4](https://github.com/avollkopf/craftbeerpi4).
+MQTTDevice is an Arduino sketch for ESP32 and ESP8266 Wemos D1 mini modules. MQTTDevice enables communication between sensors, actors and an induction hob GGM IDS2 via WLAN and MQTT with [CraftBeerPi V4](https://github.com/avollkopf/craftbeerpi4).
 
-The instructions on MQTTDevice gitbook apply to both modules, ESP32 and ESP8266. MQTTDevice32 offers more GPIOs and a faster CPU than MQTTDevice4. Please note some syntax differences when flashing firmware.
+The instructions on MQTTDevice gitbook apply to both modules, ESP32 and ESP8266. MQTTDevice32 supports more actors, more sensors and a faster dual core CPU than MQTTDevice4. Please note some syntax differences when flashing firmware.
 
-Please support the MQTTDevice project and expand this short manual, FAQs, languages etc.
+Please support the MQTTDevice project and expand this short manual, FAQs, languages files etc.
 
 ![Web Interface](img/startseite.jpg)
 
@@ -12,7 +12,7 @@ Please support the MQTTDevice project and expand this short manual, FAQs, langua
 
 MQTTDevice supports different languages. Each language has its own language file. The language files in JSON format are stored in the data folder.
 
-_Supported the project and translate MQTTDevice into a new language or corrected existing language files!_
+_Supported the project and translate MQTTDevice into a new language or extend existing language files!_
 
 ## 💠 GPIO mapping ESP32
 

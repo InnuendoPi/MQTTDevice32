@@ -13,9 +13,9 @@ Example for an ESP8266 module of the type Wemos D1 mini with 4MB Flash connected
 
   * Double click on the file Flashen.cmd.
 
-  The firmware is now installed on the MQTT device.
+  The firmware is now transfered into MQTTdevice flash.
 
-  *The Flash script uses COM3 as the connection for the MQTTDevice. If COM3 is not the correct port for the Wemos D1 mini, COM3 must be replaced by the correct port in two places in the Flashen.cmd script.*
+  *Script flashen.cmd uses port COM3. If COM3 is not the correct port for the Wemos D1 mini, edit flashen.cmd and replace COM3 as required.*
 
 ## Manual flash firmware
 

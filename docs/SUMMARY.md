@@ -5,6 +5,7 @@
 * [Installation](installation.md)
   * [MQTT](MQTT.md)
   * [Flash firmware](Flashen.md)
+  * [Setup sensors and actors](setup.md)
   * [CBPi4](MQTT-CBPi4.md)
 * [Updates](Update.md)
 * [Configuration](Configuration.md)

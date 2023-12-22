@@ -1,6 +1,6 @@
 # Updates
 
-The firmware offers two options for installing updates very easily.
+The firmware offers two update options.
 
 1. Firmware Update file upload
 

@@ -4,10 +4,12 @@ MQTT installation and configuration is described here in detail: <https://openbr
 
 After CBPi4 restart MQTT is available for sensors and actors
 
-![mqttSensor](img/mqttSensor.jpg)
-
-![mqttAktor](img/mqttAktor.jpg)
+![MQTT sensor](img/mqttSensor.jpg)
 
 Please note the dot in PayloadDictionary: Sensor.Value (Sensor dot Value)
 
-MQTT mosquitto instalaltion and configuration for windows is nearly the same. If MQTT actors and sensors are used instead of GPIOs hardware, craftbeerpi4 can be installed on ms windows systems.
+![MQTT induction](img/mqttInduction.jpg)
+
+![MQTT actor](img/mqttAktor.jpg)
+
+MQTT mosquitto installtion and configuration for windows is nearly the same. If MQTT actors and sensors are used instead of GPIOs hardware, craftbeerpi4 can be installed on ms windows systems.
