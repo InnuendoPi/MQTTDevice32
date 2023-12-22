@@ -1,9 +1,9 @@
 # ▶️ Flash firmware
 
-With the help of esptool.exe (<https://github.com/igrr/esptool-ck/releases>) in the github tools subfolder, the firmware can be flashed onto the ESP module. The ESPTool is available for different operating systems.
+With the help of esptool.exe (<https://github.com/igrr/esptool-ck/releases>), the firmware can be flashed onto the ESP module. The ESPTool is available for different operating systems.
 ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This code is licensed under GPL v2.
 
-The USB driver CH341SER is required under Win10: <http://www.wch.cn/download/CH341SER_ZIP.html>
+The USB driver CH341SER is required under Win10/11: <http://www.wch.cn/download/CH341SER_ZIP.html>
 
 Example for an ESP8266 module of the type Wemos D1 mini with 4MB Flash connected via USB as COM3
 

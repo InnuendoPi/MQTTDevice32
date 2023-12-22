@@ -8,7 +8,7 @@ It is recommended to make a backup after configuration is completed. MQTT backup
 
 ## Explorer
 
-If you want to work with files directly you can use the file explorer. The file explorer can be reached via the web browser <http://mqttdevice/edit>. File explorer offers editor functions. You can check, view and edit files types like txt, json or css. 
+If you want to work with files directly you can use the file explorer. The file explorer can be reached via the web browser <http://mqttdevice/edit>. File explorer offers editor functions. You can check, view and edit files types like txt, json or css.
 
 ![File explorer](img/explorer.jpg)
 

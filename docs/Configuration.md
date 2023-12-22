@@ -18,7 +18,7 @@ Most of the functions of the firmware are self-explanatory. The addition or dele
 
 Note: sensor calibration is an optional task. A two-point calibrtation is recommended espacially for mash tune sensors.
 
-The firmware provides an easy option for sensor calibration. Three options availble:
+The firmware provides an easy option for sensor calibration. Three options available:
 
     * no calibration
     
@@ -33,11 +33,10 @@ The firmware provides an easy option for sensor calibration. Three options avail
 A two point calibration provides a more accurate correction of each sensor by re-scaling it at two poinst instad of just one (constant offset). All you need is your mash tune, a calibrated temperature sensor and a cbpi4 mash profil, which includes two mash steps: at 40°C (low mashin temperature) and at 78°C (mashout temperature). Set both mash step timers to something lik 3 to 5 minutes. Fill your mash tune with water. If possible turn on agitator. Now start the two step mash profile in CraftbeerPi4. When temperatur 40°C is reached measure the temperature with a calibrated sensor. The difference between sensor value and calibrated temperatur sensor is offset 1. Repeat measurement when 78°C is reached. The difference is offset 2. In a two-point calibration it is very important to do the first measure at exactly 40°C and the second measure at exactly 78°C!
 
 Calibration example:
-Measurement
-![sencal1](img/sensor_calibration2.jpg)
 
-Sensor setting
-![sencal2](img/sensor_calibration.jpg)
+![Measurement](img/sensor_calibration2.jpg)
+
+![Sensor settings](img/sensor_calibration.jpg)
 
 ## Misc settings
 
@@ -45,7 +44,7 @@ Sensor setting
 
 **Piezo Buzzer:**
 
-A piezo buzzer can only be connected to PIN D8. A piezo buzzer is optional. The firmware supports 4 different signals: ON, OFF, OK and ERROR
+A piezo buzzer can only be connected to GPIO D8. A piezo buzzer is optional. The firmware supports 4 different audio signals: ON, OFF, OK and ERROR
 
 **HMI display:**
 
@@ -53,16 +52,19 @@ If you want to use a display check jumper settings J1 and J2 first. GPIOs D1 and
 
 **mDNS:**
 
-Multicast DNS is used to resolve hostnames to IP addresses in small networks. A mDNS name can be used instead of the IP address to open the mqttdevice web interface in a browser. Default mDNS name is mqttdevice. Open the configuration panel <http://mqttdevice.local> in your web browser. The name is freely selectable. The mDNS name must be unique in local network and must not contain any spaces or special characters. Please note: if you use two or more MQTTDevices you must change default mDNS "mqttdevice" into an unique identifier! Reboot your mqttdevice after changing mDNS.
-
-![mqtt](img/mqtt.jpg)
+Multicast DNS is used to resolve hostnames to IP addresses in small networks. A mDNS name can be used instead of the IP address to open the mqttdevice web interface in a browser. Default mDNS name is mqttdevice. Open the configuration panel <http://mqttdevice.local> in your web browser. The name is freely selectable. The mDNS name must be unique in local network and must not contain any spaces or special characters. Please note: if you use two or more MQTTDevices you must change default mDNS "mqttdevice" into an unique identifier! Reboot your mqttdevice after changing mDNS. mDNS names are not case sensitive.
 
 **IP address MQTT Server (CBPi):**
 
-On this page you have to enter IP address, Port and credentials of your MQTT broker. In most cases, this is likely to be mosquitto on the CBPi. The default port is 1883.
-Important: the firmware MQTTDevice tries constantly to establish a connection with the MQTT broker. If the MQTT broker is not available, this will severely affect the speed of the MQTT device (web interface).
+![mqtt](img/mqtt.jpg)
 
-The event manager handles events and misconduct. Handling of malfunctions (event handling) is deactivated in the standard setting!
+Enter IP address, Port and credentials of your MQTT broker. In most cases, this is likely to be mosquitto on your RaspberryPi. The default port is 1883.
+
+_Important: the firmware MQTTDevice tries constantly to establish a connection with the MQTT broker. If the MQTT broker is not available, this will severely affect the speed of the MQTT device (web interface)._
+
+**EVENTS:**
+
+The event manager handles events and misconducts. Handling of malfunctions (event handling) is deactivated in the standard setting! Events are optional advanced topics. It is recommended to start your MQTTDevice setup with disabled events.
 
 Events are
 
