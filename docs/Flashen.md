@@ -1,7 +1,6 @@
 # ▶️ Flash firmware
 
-With the help of esptool.exe (<https://github.com/igrr/esptool-ck/releases>), the firmware can be flashed onto the ESP module. The ESPTool is available for different operating systems.
-ESPtool-ck Copyright (C) 2014 Christian Klippel <ck@atelier-klippel.de>. This code is licensed under GPL v2.
+With the help of esptool.exe (<https://github.com/espressif/esptool>), the firmware can be flashed onto the ESP module. The ESPTool is available for different operating systems. ESPTool is licensed under GPL v2.
 
 The USB driver CH341SER is required under Win10/11: <http://www.wch.cn/download/CH341SER_ZIP.html>
 
@@ -15,8 +14,6 @@ Example for an ESP8266 module of the type Wemos D1 mini with 4MB Flash connected
 
   The firmware is now transfered into MQTTdevice flash.
 
-  *Script flashen.cmd uses port COM3. If COM3 is not the correct port for the Wemos D1 mini, edit flashen.cmd and replace COM3 as required.*
-
 ## Manual flash firmware
 
 Linux users must download esptool and flash firmware manual
@@ -24,19 +21,17 @@ Linux users must download esptool and flash firmware manual
 ESP32 modules:
 
 ```bash
-esptool.exe -p COM3  --chip esp32 erase_flash
+esptool.exe --chip esp32 erase_flash
 echo Flash firmware and LittleFS 
-esptool.exe --chip esp32 --port COM3 --baud 921600  --before default_reset --after hard_reset write_flash  -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 MQTTDevice32.ino.bootloader.bin 0x8000 MQTTDevice32.ino.partitions.bin 0xe000 boot_app0.bin 0x10000 MQTTDevice32.ino.bin 0x2b0000 MQTTDevice32.mklittlefs.bin
+esptool.exe --chip esp32 --before default_reset --after hard_reset write_flash 0x1000 MQTTDevice32.ino.bootloader.bin 0x8000 MQTTDevice32.ino.partitions.bin 0xe000 boot_app0.bin 0x10000 MQTTDevice32.ino.bin 0x2b0000 MQTTDevice32.mklittlefs.bin
 ```
 
 ESP8266 modules
 
 ```bash
-esptool.exe -cp COM3 -cd nodemcu -ce
-esptool.exe -cp COM3 -cd nodemcu -ca 0x000000 -cf MQTTDevice.ino.bin -ca 0x200000 -cf MQTTDevice.mklittlefs.bin
+esptool.exe --chip esp8266 erase_flash
+esptool.exe --chip esp8266 write_flash MQTTDevice.ino.bin 0x200000 MQTTDevice.mklittlefs.bin
 ```
-
-Change COM3 as required.
 
 ## Flash Firmware macOS
 
