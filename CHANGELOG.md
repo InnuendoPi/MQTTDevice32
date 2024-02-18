@@ -8,6 +8,7 @@ Version 4.59a
 - Changed:    MQTT Callback
 - Changed:    subscribe to fermenter topics if enabled
 - New:        Parameter dutycycle
+- Changed:    Filtering MQTT payloads
 
 Version 4.58b
 
