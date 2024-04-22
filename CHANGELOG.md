@@ -1,5 +1,13 @@
 # Changelog
 
+Version 4.61a
+
+- Fix:        ESP32 error loading WebIf (sometimes WebIf incomplete, icons missing, ESP32 reboot after 20sec due to no answer web requests)
+- Optimize:   Load WebIf ESP32
+- Update:     ESP32 core 2.0.15 ESP-IDF v4.4.7
+- Update:     ESPtool 4.7.0
+- Update:     VSCode 1.88
+
 Version 4.60
 
 - New:        Parameter senCycle for CBPi4 fermenter mode (leave default 1 second)
