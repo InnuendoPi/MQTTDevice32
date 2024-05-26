@@ -77,5 +77,6 @@ FSBrowser/
 *.h
 *.cpp
 *.hintrc
+*.csv
 PINMAP.txt
 Infos.txt

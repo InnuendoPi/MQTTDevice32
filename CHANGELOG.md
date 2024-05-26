@@ -1,5 +1,15 @@
 # Changelog
 
+Version 4.61c
+
+- Update:     ESP32 core 2.0.17 ESP-IDF v4.4.7
+- Update:     VSCode 1.89
+- Changed:    IDS2 Update intervall 1000ms
+
+Version 4.61b
+
+- Update:     ESP32 core 2.0.16 ESP-IDF v4.4.7
+
 Version 4.61a
 
 - Fix:        ESP32 error loading WebIf (sometimes WebIf incomplete, icons missing, ESP32 reboot after 20sec due to no answer web requests)
