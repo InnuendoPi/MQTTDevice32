@@ -1,5 +1,12 @@
 # Changelog
 
+Version 4.62
+
+- Update:     ArduinoJSON 7.1.0
+- Fix:        Arduino core: set back Pin signal polarity (#9952)
+- Update:     ESP-IDF v4.4.8 final
+- Update:     Arduino CLI 1.0.2
+
 Version 4.61c
 
 - Update:     ESP32 core 2.0.17 ESP-IDF v4.4.7
