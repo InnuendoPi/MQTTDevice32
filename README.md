@@ -43,12 +43,12 @@ Beschreibung & Anleitung: [Anleitung](https://innuendopi.gitbook.io/mqttdevice32
 
 ## 🗺️ Changelog Version 4.65
 
-ESP32 Arduino 2.0.17 ESP-IDF 4.4.8
-VSCode 1.93 Arduino 0.6 Arduino CLI 1.0.4
-VSCode plugin ESP8266LittleFS based on ESP8266fs
-InnuTicker task scheduler lib
-InnuNextion Display lib based on EasyNext
-InnuFramework CSS/JS bootstrap 4.6.2
+ESP32 Arduino 2.0.17 ESP-IDF 4.4.8\
+VSCode 1.93 Arduino 0.6 Arduino CLI 1.0.4\
+VSCode plugin ESP8266LittleFS based on ESP8266fs\
+InnuTicker task scheduler lib\
+InnuNextion Display lib based on EasyNext\
+InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
 * Fix:        ESP32 pin mapping D16 incorrect
@@ -59,9 +59,9 @@ Server Sent Events (6 SSE channels)
 * Fix:        DS18B20 sensor id mismatch
 * Removed:    Debug code
 * changed:    migrate WebIf ajax post methods to JSON format
-* changed:    Dallas DS18B20 temperature request async mode
+* changed:    Dallas DS18B20 temperature request into async mode
 * changed:    logging output sensors, actors and induction
-* New:        web if client side validation
+* New:        WebIf client side validation
 * New:        InnuLog lib debug output on serial monitor
 * New:        InnuNextion Display lib (platformIO ready)
 * Update:     ArduinoJSON 7.2.0
