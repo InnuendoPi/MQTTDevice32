@@ -1,7 +1,8 @@
 # Changelog
 
-Version 4.65
+Version 4.65.1
 
+- Fix:        InnuNextion Display lib buttons handling failed, when reading from serial receives not enough chars
 - Fix:        ESP32 pin mapping D16 incorrect
 - Fix:        ESP32 used_pin array at position D16 incorrect
 - Fix:        ESP32 second sensor PT100x exception fixed (mapping GPIO D16)
