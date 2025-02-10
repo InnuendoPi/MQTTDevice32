@@ -1,5 +1,11 @@
 # Changelog
 
+Version 4.67
+
+- Update:     ArduinoJSON 7.3
+- Update:     Dallas Temperature 4.0.4
+- Fix:        ArduinoJSON type err
+
 Version 4.66
 
 - merge:      merge development branch into new release 4.66

@@ -41,16 +41,19 @@ MQTTDevice32 ist ein Arduino Sketch für Wemos ESP32 D1 mini Module. Mit dem MQT
 
 Beschreibung & Anleitung: [Anleitung](https://innuendopi.gitbook.io/mqttdevice32/)
 
-## 🗺️ Changelog Version 4.66
+## 🗺️ Changelog Version 4.67
 
 ESP32 Arduino 2.0.17 ESP-IDF 4.4.8\
-VSCode 1.93 Arduino 0.6 Arduino CLI 1.0.4\
+VSCode 1.97 Arduino 0.7 Arduino CLI 1.1.1\
 VSCode plugin ESP8266LittleFS based on ESP8266fs\
 InnuTicker task scheduler lib\
 InnuNextion Display lib based on EasyNext\
 InnuFramework CSS/JS bootstrap 4.6.2\
 Server Sent Events (6 SSE channels)
 
+* Update:     ArduinoJSON 7.3
+* Update:     Dallas Temperature 4.0.4
+* Fix:        ArduinoJSON type err
 * new:        norwegian language file added - thank you for supporting this projekt @ user oyvind
 * changed:    DS18B20 sensors error handling
 * Fix:        DS18B20 sensors address search (ESP8266)
