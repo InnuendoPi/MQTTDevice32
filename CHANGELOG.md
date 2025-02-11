@@ -2,6 +2,7 @@
 
 Version 4.67
 
+- Fix:        LittleFS image broken, after upgrade mklittlefs. downgrade mklittlefs 3.2.0 (littlefs version)
 - Update:     ArduinoJSON 7.3
 - Update:     Dallas Temperature 4.0.4
 - Fix:        ArduinoJSON type err
